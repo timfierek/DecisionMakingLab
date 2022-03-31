@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class Decisions {
+	
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int num = -1;
+		
+		System.out.print("Enter a number between 1 and 100: ");
+		
+		num = input.nextInt();
+		
+		input.close();
+		
+		
+		switch(num % 2){
+			case 0:	//Even Number
+				if(num <= 25) {
+					System.out.println("Even and less than 25");
+				}
+				else if(num <= 60) {
+					System.out.println("Even");
+				}
+				else {
+					System.out.println(num + " and Even");
+				}
+				break;
+			case 1: //Odd Number
+				if(num > 60) {
+					System.out.print("Odd and over 60");
+				}
+				else {
+					System.out.print(num + " and Odd");
+				}
+				break;
+		}
+		
+		/*// Handle all odd cases
+		if(oddOrEven(num).equalsIgnoreCase("odd")) {
+			if(num > 60) {
+				System.out.print("Odd and over 60");
+				return;
+			}
+			System.out.print(num + " Odd");
+			return;
+		}
+		
+		// Handle all even cases
+		if(num > 1 && num < 26) {
+			System.out.println("Even and less than 25");
+			return;
+		}
+		else if(num > 25 && num < 61) {
+			System.out.println("Even");
+			return;
+		}
+		else {
+			System.out.println(num + " Even");
+			return;
+		}
+	*/	
+	}
+	
+	
+	 public static String oddOrEven(int i) { 
+		if(i % 2 == 0) { 
+			return "even"; 
+		}
+	 
+		return "odd"; 
+	 }
+	 
+	
+}
